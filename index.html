@@ -1,44 +1,188 @@
-<html><head>
-  <title>Mine Buccal | Styled Page</title>
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/inbox2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mine Buccal | Web Developer</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #F6EED8;
       font-family: 'Segoe UI', sans-serif;
-      color: #964B00;
+      background: #fffde5;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #803e00;
+      color: #fffde5;
+      padding: 60px 20px;
       text-align: center;
-      padding-top: 250px;
     }
 
-    h1 {
-      color: #964B00;
-      font-size: 36px;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    p {
-      font-size: 20px;
+    header p {
+      font-size: 1.2rem;
+      color: #fffde5;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #2e2e2e;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #803e00;
+    }
+
+    .contact-form {
+      background: #803e00;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
       margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
 
     button {
-      background-color: #964B00;
-      color: rgb(255, 255, 255);
+      background-color: #ffffff;
+      color: #7a3b00;
       border: none;
       padding: 12px 24px;
       font-size: 16px;
       border-radius: 6px;
       cursor: pointer;
-      margin-top: 20px;
     }
 
     button:hover {
-      background-color: #ffffff;
+      background-color: #ffffff88;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 60px;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card, .contact-form {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hi, I’m Mahmoud</h1>
-  <p>This is my first styled web page.</p>
-  <p>I’m learning fast and building my future.</p>
-  <button>Click Me</button>
+
+  <header>
+    <h1>Close Web</h1>
+    <p>Beginner Web Developer | Bangladesh 🇧🇩</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>👋 About Me</h2>
+      <p>I’m a passionate beginner web developer learning HTML, CSS, and JavaScript — building real websites. I work hard, learn fast, and use AI as my secret weapon to build better.</p>
+    </div>
+
+    <div class="card">
+      <h2>💻 What I Can Do</h2>
+      <p>Design responsive websites, clean layouts, personal or business pages, portfolio sites, landing pages. I work in VS Code, host on GitHub, and use clean code. Every project is made with care and detail.</p>
+    </div>
+
+    <div class="card contact-form">
+      <h2>📬 Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required="">
+        <input type="email" placeholder="Your Email" required="">
+        <textarea rows="4" placeholder="Your Message" required=""></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Closeweb. Built with US.
+  </footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
 </body></html>
